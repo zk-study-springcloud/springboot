@@ -18,7 +18,7 @@ public class LucyController {
 
     @RequestMapping("/lucy")
     public String miya() {
-        return configBean.getGreeting() + "-" + configBean.getName() + "-" +
-                configBean.getUuid() + "-" + configBean.getMax();
+        return configBean.getGreeting() + "_" + configBean.getName() + "_" +
+                configBean.getUuid() + "_" + configBean.getMax();
     }
 }
