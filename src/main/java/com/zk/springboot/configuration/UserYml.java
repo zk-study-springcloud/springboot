@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
-//@Configuration
+@Configuration
 //只使用于properties配置文件
 //@PropertySource(value = "classpath:application-test.yml")
 @ConfigurationProperties(prefix = "com.forezpyml")
