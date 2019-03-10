@@ -10,3 +10,6 @@ spring:
   profiles:
     #暂且注释，如果需要使用dev的配置，后面“，”加上dev即可
     active: test #,dev
+management:
+  server:
+    port: 9001
