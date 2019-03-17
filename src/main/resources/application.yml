@@ -13,3 +13,12 @@ spring:
 management:
   server:
     port: 9001
+  endpoints:
+    #开启所有API接口，默认只开启health和info
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      #显示所有监控信息
+      show-details: always
