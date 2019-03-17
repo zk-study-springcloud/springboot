@@ -22,3 +22,6 @@ management:
     health:
       #显示所有监控信息
       show-details: always
+    #开启关闭服务节点
+    shutdown:
+      enabled: true
