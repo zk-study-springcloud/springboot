@@ -1,27 +1,11 @@
-my:
-  name: zk
-  age: 28
-  number: ${random.int}
-  uuid: ${random.uuid}
-  max: ${random.int(10)}
-  vlaue: ${random.value}
-  greeting: hi,i`m ${my.name}
 spring:
-  profiles:
-    #暂且注释，如果需要使用dev的配置，后面“，”加上dev即可
-    active: test #,dev
-management:
-  server:
-    port: 9001
-  endpoints:
-    #开启所有API接口，默认只开启health和info
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      #显示所有监控信息
-      show-details: always
-    #开启关闭服务节点
-    shutdown:
-      enabled: true
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    database: 1
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 500
