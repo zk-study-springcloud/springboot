@@ -1,18 +1,11 @@
 spring:
-  redis:
-    #Redis地址
-    host: localhost
-    #Redis端口
-    port: 6379
-    #Redis密码
-    password:
-    #Redis库索引
-    database: 1
-    jedis:
-      pool:
-        #连接池最大连接数（使用负值表示没有限制），与旧版本配置不同，旧版本不在jedis里
-        max-active: 8
-        #连接池最大阻塞等待时间（使用负值表示没有限制），与旧版本配置不同，旧版本不在jedis里
-        max-wait: -1
-        #连接池中的最大空闲连接
-        max-idle: 500
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring-cloud?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      #第一次建表create 后面用update
+      ddl-auto: update
+    show-sql: true
